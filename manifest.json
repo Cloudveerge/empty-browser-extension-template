@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "empty browser extension template ",
+  "version": "1.0",
+  "description": "This is a simple and minimal template for building browser extensions. It provides the basic structure required for creating a browser extension using Manifest V3.",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"]
+    }
+  ]
+}
